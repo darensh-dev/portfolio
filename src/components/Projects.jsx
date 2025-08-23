@@ -34,13 +34,13 @@ const ProjectCard = ({ project, handleContact, index }) => {
           </p>
 
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.tech.map((tech) => (
+            {project.stack.map((tech) => (
               <span
-                key={tech}
+                key={tech.name}
                 className="px-3 py-1 text-sm font-medium"
                 style={{ background: 'var(--bg-accent)', color: 'var(--text-accent)', clipPath: 'polygon(0 0, 100% 0, 95% 100%, 5% 100%)' }}
               >
-                {tech}
+                {tech.name}
               </span>
             ))}
           </div>

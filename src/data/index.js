@@ -1,83 +1,336 @@
-import { Sun, Moon, Palette, Rocket } from 'lucide-react';
-import Planet1 from '@/components/planets/Planet1';
-import Planet2 from '@/components/planets/Planet2';
-import Planet3 from '@/components/planets/Planet3';
-import Planet4 from '@/components/planets/Planet4';
-import Planet5 from '@/components/planets/Planet5';
-
+import { Sun, Moon, Palette, Rocket } from "lucide-react";
+import Planet1 from "@/components/planets/Planet1";
+import Planet2 from "@/components/planets/Planet2";
+import Planet3 from "@/components/planets/Planet3";
+import Planet4 from "@/components/planets/Planet4";
+import Planet5 from "@/components/planets/Planet5";
 
 export const themes = [
-  { id: 'space', name: 'Espacio', icon: Rocket, color: '#00f7ff' },
-  { id: 'light', name: 'Claro', icon: Sun, color: '#8b5cf6' },
+  { id: "space", name: "Espacio", icon: Rocket, color: "#00f7ff" },
+  { id: "light", name: "Claro", icon: Sun, color: "#8b5cf6" },
 ];
 
 export const navLinks = [
-  { id: 'inicio', name: 'Base', PlanetComponent: Planet1 },
-  { id: 'sobre-mi', name: 'Sobre Mí', PlanetComponent: Planet2 },
-  { id: 'experiencia', name: 'Experiencia', PlanetComponent: Planet3 },
-  { id: 'proyectos', name: 'Proyectos', PlanetComponent: Planet4 },
-  { id: 'contacto', name: 'Contacto', PlanetComponent: Planet5 },
+  { id: "inicio", name: "Base", PlanetComponent: Planet1 },
+  { id: "sobre-mi", name: "Sobre Mí", PlanetComponent: Planet2 },
+  { id: "experiencia", name: "Experiencia", PlanetComponent: Planet3 },
+  { id: "proyectos", name: "Proyectos", PlanetComponent: Planet4 },
+  { id: "contacto", name: "Contacto", PlanetComponent: Planet5 },
 ];
 
 export const skills = [
-  { name: 'React / Next.js', level: 95, color: 'var(--pastel-blue)' },
-  { name: 'Node.js / Express', level: 90, color: 'var(--pastel-green)' },
-  { name: 'TypeScript', level: 88, color: 'var(--pastel-purple)' },
-  { name: 'Python / FastAPI', level: 85, color: 'var(--pastel-yellow)' },
-  { name: 'PostgreSQL / MongoDB', level: 82, color: 'var(--pastel-pink)' },
-  { name: 'AWS / Docker', level: 80, color: 'var(--pastel-orange)' }
+  { name: "React / Next.js", level: 95, color: "var(--pastel-blue)" },
+  { name: "Node.js / Express", level: 90, color: "var(--pastel-green)" },
+  { name: "TypeScript", level: 88, color: "var(--pastel-purple)" },
+  { name: "Python / FastAPI", level: 85, color: "var(--pastel-yellow)" },
+  { name: "PostgreSQL / MongoDB", level: 82, color: "var(--pastel-pink)" },
+  { name: "AWS / Docker", level: 80, color: "var(--pastel-orange)" },
 ];
 
 export const projects = [
   {
     id: 1,
-    title: 'Plataforma E-commerce Cósmica',
-    description: 'Plataforma de comercio electrónico completa con temática espacial, construida con React, Node.js y PostgreSQL.',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: 'Plataforma de comercio electrónico moderna con una interfaz limpia y futurista',
-    featured: true
-  },
-  {
-    id: 2,
-    title: 'Gestor de Tareas Interestelar',
-    description: 'Aplicación de gestión de tareas con colaboración en tiempo real para equipos distribuidos por la galaxia.',
-    tech: ['Vue.js', 'Express', 'Socket.io', 'MongoDB'],
-    image: 'Aplicación de gestión de tareas con tableros kanban y fondo de nebulosa',
-    featured: true
+    title: "Generador de Gráficas Dinámicas con Highcharts",
+    description:
+      "Endpoint backend que genera imágenes de gráficas personalizadas a partir de datos y configuraciones enviadas por el cliente. La solución permite automatizar reportes visuales y sigue siendo utilizada activamente en entornos productivos.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // aquí puedes subir capturas reales si las tienes
+    tags: ["backend", "automatización", "reporte visual"],
+    stack: [
+      { name: "python", color: "blue", icon: "logos:python" },
+      { name: "flask", color: "orange", icon: "logos:flask" },
+      { name: "docker", color: "blue", icon: "logos:docker-icon" },
+      { name: "highcharts", color: "red", icon: "logos:highcharts" },
+    ],
+    urlRepo: "https://github.com/darensh/grafica-endpoint", // reemplaza con el enlace real si es público
+    urlDeploy: "", // puedes dejarlo vacío si es privado o en entorno cerrado
+    date: "2022-10-01",
+    author: "Daren Sh",
+    level: "advanced",
+    featured: true,
   },
   {
     id: 3,
-    title: 'Dashboard de Análisis de Flotas',
-    description: 'Dashboard de análisis con visualizaciones interactivas para monitorizar flotas de naves espaciales.',
-    tech: ['React', 'D3.js', 'Python', 'FastAPI'],
-    image: 'Dashboard de análisis con gráficos holográficos y métricas de naves',
-    featured: false
-  }
+    title: "Detección de Placas Vehiculares con CropperJS",
+    description:
+      "Aplicación web que permite seleccionar regiones de imágenes con CropperJS para detectar y aislar placas de vehículos. El sistema procesa la imagen recortada para identificar y extraer la matrícula, siendo útil como paso previo a reconocimiento de texto (OCR) o análisis de tráfico.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
+    tags: ["image processing", "UI interactivity", "detección visual"],
+    stack: [
+      { name: "vue", color: "blue", icon: "logos:vue" },
+      { name: "cropperjs", color: "green", icon: "mdi:crop" },
+      { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
+      { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
+    ],
+    urlRepo: "https://github.com/darensh/placa-cropper",
+    urlDeploy: "https://placa-cropper.vercel.app",
+    date: "2024-04-10",
+    author: "Daren Sh",
+    level: "intermediate",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Proyecto 1",
+    description:
+      "cupiditate laboriosam corrupti beatae quae quaerat, dolores in. Explicabo fugit dolore ducimus, laborum asperiores temporibus beatae 1",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
+    tags: ["opensource", "license MIT"],
+    stack: [
+      { name: "vue", color: "blue", icon: "logos:vue" },
+      { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
+      { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
+    ],
+    urlRepo: "https://github.com/darensh/proyecto1",
+    urlDeploy: "https://www.google.com",
+    date: "2024-02-11",
+    author: "Daren Sh",
+    level: "beginner",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Proyecto 2",
+    description:
+      "cupiditate laboriosam corrupti beatae quae quaerat, dolores in. Explicabo fugit dolore ducimus, laborum asperiores temporibus beatae 2",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
+    tags: ["Proyecto personal", "opensource", "license MIT"],
+    stack: [
+      { name: "react", color: "blue", icon: "logos:react" },
+      { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
+      { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
+    ],
+    urlRepo: "https://github.com/darensh/proyecto2",
+    urlDeploy: "https://www.google.com",
+    date: "2024-03-01",
+    author: "Daren Sh",
+    level: "beginner",
+    featured: false,
+  },
 ];
 
 export const experiences = [
   {
-    company: 'TechCorp Solutions',
-    position: 'Ingeniero de Software Senior',
-    period: '2022 - Presente',
-    location: 'Remoto, Vía Láctea',
-    description: 'Liderando el desarrollo de aplicaciones web escalables y mentorando a la nueva generación de cadetes espaciales.',
-    achievements: ['Mejoré el rendimiento del motor de curvatura en un 40%', 'Implementé arquitectura de microservicios distribuidos', 'Lideré un escuadrón de 5 desarrolladores']
+    company: "Vanillabyte",
+    position: "Fundador & CTO",
+    period: "04/2024 - Presente",
+    location: "Remoto, Colombia",
+    description: `
+      Desde 2024 lidero Vanillabyte, una iniciativa de desarrollo de software en la que gestiono proyectos
+      tecnológicos end-to-end para clientes empresariales. Combino dirección técnica con ejecución práctica,
+      desde diseño en Figma hasta desarrollo de soluciones funcionales.
+    `,
+    achievements: [
+      "Desarrollé una landing page profesional para una empresa del sector Automobilistico, optimizada para velocidad, SEO y captación de clientes.",
+      "Diseñé y construí un design system completo en Angular, desde su estructura visual en Figma hasta componentes reutilizables funcionales, adaptados a los requerimientos de futuras integraciones.",
+      "Gestioné todas las etapas de desarrollo en ambos casos: levantamiento de requerimientos, arquitectura, implementación, QA y despliegue.",
+    ],
+    skills: [
+      { name: "Angular", icon: "logos:angular-icon" },
+      { name: "Vue.JS 3", icon: "logos:vue" },
+      { name: "React", icon: "logos:react" },
+      { name: "React Native", icon: "logos:react" },
+      { name: "HTML", icon: "logos:html-5" },
+      { name: "CSS", icon: "logos:css-3" },
+      { name: "Tailwind", icon: "logos:tailwindcss-icon" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Pinia", icon: "logos:pinia" },
+      { name: "Figma", icon: "logos:figma" },
+      { name: "Zod", icon: "logos:zod" },
+      { name: "AWS", icon: "logos:aws" },
+      { name: "Python", icon: "logos:python" },
+      { name: "FastApi", icon: "logos:fastapi-icon" },
+      { name: "Docker", icon: "logos:docker-icon" },
+      { name: "OpenAI", icon: "logos:openai-icon" },
+      { name: "LLM", icon: "mdi:chip-arrow-down" },
+      { name: "Git", icon: "logos:git-icon" },
+      { name: "GitHub", icon: "logos:github-icon" },
+      { name: "Bash", icon: "logos:bash-icon" },
+      { name: "Linux", icon: "logos:linux-tux" },
+      { name: "Hexagonal Architecture", icon: "mdi:hexagon-slice-6" },
+      { name: "Principles SOLID", icon: "logos:solid" },
+      { name: "RAG (Retrieval-Augmented Generation)", icon: "mdi:storage" },
+    ],
+    companyUrl: "https://www.vanilla-byte.com",
   },
   {
-    company: 'StartupXYZ',
-    position: 'Piloto de Desarrollo Full Stack',
-    period: '2020 - 2022',
-    location: 'Estación Espacial Kepler-186f',
-    description: 'Desarrollo de MVP y escalado de la plataforma desde 0 hasta 10k usuarios activos en todo el cuadrante.',
-    achievements: ['Diseñé la arquitectura de la nave nodriza', 'Implementé sistema de pagos intergaláctico', 'Optimicé la base de datos de navegación']
+    company: "Sainapsis Inc",
+    position: "Desarrollador FullStack",
+    period: "04/2024 - 02/2025",
+    location: "Remoto, EE.UU.",
+    description: `
+      Diseñé y desarrollé soluciones de software end-to-end orientadas a la escalabilidad, mantenibilidad y automatización inteligente,
+      contribuyendo directamente al fortalecimiento de la infraestructura técnica de la empresa.
+      Implementé funcionalidades con inteligencia artificial para potenciar la innovación del producto final.
+    `,
+    achievements: [
+      "Desarrollé un task manager inteligente que detectaba automáticamente tareas dentro de mensajes de clientes, integrando frontend, backend y diseño de base de datos, con una arquitectura hexagonal agnóstica a LLMs.",
+      "Fui pionero en la adopción de esta arquitectura dentro de la empresa, creando proyectos base reutilizables para futuras funcionalidades de IA.",
+      "Implementé hard-sync en la app móvil, usando Zod para validar datos y garantizar sincronización confiable incluso offline.",
+      "Diseñé microservicios modulares y escalables aplicando principios SOLID que facilitaron el desarrollo de nuevas funcionalidades sin comprometer estabilidad.",
+      "Establecí buenas prácticas técnicas adoptadas por otros equipos, mejorando la calidad y consistencia del código",
+    ],
+    skills: [
+      { name: "React", icon: "logos:react" },
+      { name: "React Native", icon: "logos:react" },
+      { name: "Tailwind", icon: "logos:tailwindcss-icon" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Figma", icon: "logos:figma" },
+      { name: "Zod", icon: "logos:zod" },
+      { name: "AWS", icon: "logos:aws" },
+      { name: "Python", icon: "logos:python" },
+      { name: "FastApi", icon: "logos:fastapi-icon" },
+      { name: "Docker", icon: "logos:docker-icon" },
+      { name: "OpenAI", icon: "logos:openai-icon" },
+      { name: "LLM", icon: "mdi:chip-arrow-down" },
+      { name: "SQLite", icon: "logos:sqlite" },
+      { name: "Redis", icon: "logos:redis" },
+      { name: "Open Search", icon: "logos:aws-open-search" },
+      { name: "GraphQL", icon: "logos:graphql" },
+      { name: "Go", icon: "logos:go" },
+      { name: "Git", icon: "logos:git-icon" },
+      { name: "GitHub", icon: "logos:github-icon" },
+      { name: "Bash", icon: "logos:bash-icon" },
+      { name: "Linux", icon: "logos:linux-tux" },
+      { name: "ZenHub", icon: "logos:zenhub-icon" },
+      { name: "Hexagonal Architecture", icon: "mdi:hexagon-slice-6" },
+      { name: "Principles SOLID", icon: "logos:solid" },
+      { name: "RAG (Retrieval-Augmented Generation)", icon: "mdi:storage" },
+    ],
+    companyUrl: "https://www.sainapsis.com",
   },
   {
-    company: 'Digital Agency',
-    position: 'Diseñador de Interfaces de Navegación',
-    period: '2018 - 2020',
-    location: 'Marte, Cráter Gale',
-    description: 'Creación de sitios web responsivos y aplicaciones interactivas para clientes de todo el sistema solar.',
-    achievements: ['Entregué +20 proyectos con éxito', 'Mejoré el SEO para búsquedas interplanetarias en un 60%', 'Implementé mejores prácticas de Experiencia de Usuario (UX)']
-  }
+    company: "Alfa Eye",
+    position: "Desarrollador FullStack",
+    period: "09/2022 - 01/2024",
+    location: "Remoto, Dublin Irlanda",
+    description: `
+      Lideré el desarrollo de soluciones digitales estratégicas para ALFAEYE,
+      gestionando el ciclo completo de proyectos: desde el levantamiento de requerimientos hasta el despliegue en producción.
+      Coordiné la integración entre equipos, asegurando la entrega de productos robustos,
+      escalables y alineados con los objetivos del negocio.
+    `,
+    achievements: [
+      "Diseñé y desarrollé desde cero la plataforma principal de ALFAEYE, llevando el proyecto desde requerimientos hasta producción y convirtiéndolo en un producto clave para la operación interna y de clientes.",
+      "Logré reducir los tiempos de entrega y errores en despliegues mediante la implementación de pipelines estables y entornos Docker seguros y versionados.",
+      "Optimizé la comunicación entre backend y frontend mediante una arquitectura clara y desacoplada, mejorando el rendimiento y reduciendo errores de integración en un 40%.",
+      "Estandaricé estructuras de bases de datos flexibles y escalables, facilitando futuras integraciones con nuevos módulos y funcionalidades.",
+      "Consolidé procesos de desarrollo que aumentaron la estabilidad del producto en producción, reduciendo incidencias técnicas post-lanzamiento en un 70%.",
+    ],
+    skills: [
+      { name: "Vue.JS 3", icon: "logos:vue" },
+      { name: "HTML", icon: "logos:html-5" },
+      { name: "CSS", icon: "logos:css-3" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "HighCharts", icon: "logos:highcharts" },
+      { name: "PrimeVue", icon: "mdi:file-compare" },
+      { name: "Pinia", icon: "logos:pinia" },
+      { name: "Python", icon: "logos:python" },
+      { name: "Flask", icon: "logos:flask" },
+      { name: "Docker", icon: "logos:docker-icon" },
+      { name: "Sentry", icon: "vscode-icons:file-type-sentry" },
+      { name: "JSON", icon: "mdi:code-json" },
+      { name: "Azure", icon: "logos:microsoft-azure" },
+      { name: "AWS", icon: "logos:aws" },
+      { name: "SQL Server", icon: "logos:microsoft-icon" },
+      { name: "SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "SP/SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "CI/CD", icon: "mdi:chemical-weapon" },
+      { name: "Redis", icon: "logos:redis" },
+      { name: "Nginx", icon: "logos:nginx" },
+      { name: "Principles SOLID", icon: "logos:solid" },
+      { name: "Microservicios", icon: "mdi:local-area-network" },
+      { name: "Git", icon: "logos:git-icon" },
+      { name: "GitHub", icon: "logos:github-icon" },
+      { name: "GitLab", icon: "logos:gitlab" },
+      { name: "Bash", icon: "logos:bash-icon" },
+      { name: "Linux", icon: "logos:linux-tux" },
+    ],
+    companyUrl: "https://alfaeye.com/en/",
+  },
+  {
+    company: "Energia Solar ESWindows",
+    position: "Ingeniero de desarrollo de software",
+    period: "01/2022 - 03/2023",
+    location: "Barranquilla, Colombia",
+    description: `
+      Lideré el desarrollo de microservicios y el diseño de interfaces modernas,
+      contribuyendo al crecimiento tecnológico de la empresa.
+      Combiné backend robusto con frontend enfocado en experiencia de usuario,
+      entregando soluciones escalables, funcionales y visualmente consistentes.
+    `,
+    achievements: [
+      "Desarrollé un endpoint dinámico capaz de renderizar imágenes a partir de datos y configuraciones personalizadas (colores, etiquetas, tipo de gráfico), utilizando Flask, Highcharts y Docker. La solución sigue en uso como herramienta clave en la generación automática de reportes visuales, adaptándose a múltiples casos de uso sin requerir cambios de código.",
+      "Desarrollé microservicios escalables en Python que mejoraron la capacidad de respuesta del sistema ante cargas crecientes y nuevas funcionalidades del negocio.",
+      "Diseñé y desplegué interfaces con Vue.js que mejoraron la experiencia de usuario, combinando funcionalidad y estética en plataformas internas clave.",
+      "Transformé la interfaz de usuario mediante la integración de Vuetify, logrando mayor coherencia visual y reduciendo los errores de navegación en entornos productivos.",
+      "Introduje buenas prácticas de desarrollo frontend y patrones de diseño que facilitaron el mantenimiento y evolución de la interfaz.",
+    ],
+    skills: [
+      { name: "Vue.JS 2", icon: "logos:vue" },
+      { name: "JavaScript", icon: "logos:javascript" },
+      { name: "HTML", icon: "logos:html-5" },
+      { name: "CSS", icon: "logos:css-3" },
+      { name: "Vuex", icon: "logos:pinia" },
+      { name: "HighCharts", icon: "logos:highcharts" },
+      { name: "VuetifyJS", icon: "logos:vuetifyjs" },
+      { name: "Vite Test", icon: "logos:vitest" },
+      { name: "Python Test", icon: "vscode-icons:file-type-pytest" },
+      { name: "Python", icon: "logos:python" },
+      { name: "Flask", icon: "logos:flask" },
+      { name: "Docker", icon: "logos:docker-icon" },
+      { name: "Sentry", icon: "vscode-icons:file-type-sentry" },
+      { name: "JSON", icon: "mdi:code-json" },
+      { name: "MySQL", icon: "vscode-icons:file-type-mysql" },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "SQL Server", icon: "logos:microsoft-icon" },
+      { name: "PL/SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "Nginx", icon: "logos:nginx" },
+      { name: "Git", icon: "logos:git-icon" },
+      { name: "GitHub", icon: "logos:github-icon" },
+      { name: "GitLab", icon: "logos:gitlab" },
+      { name: "Bash", icon: "logos:bash-icon" },
+      { name: "Linux", icon: "logos:linux-tux" },
+      { name: "Principles SOLID", icon: "logos:solid" },
+      { name: "Microservicios", icon: "mdi:local-area-network" },
+    ],
+    companyUrl: "https://eswindows.com/es/nuestra-compania",
+  },
+  {
+    company: "Construseñales S.A",
+    position: "Desarrollador junior",
+    period: "01/2021 - 01/2022",
+    location: "Barranquilla, Colombia",
+    description: `
+      Fui contratado tras finalizar mis prácticas, convirtiéndome en el primer aprendiz en ser incorporado por mérito propio,
+      gracias a mi capacidad para resolver problemas y adaptarme rápidamente.
+      Durante este periodo, contribuí activamente al desarrollo de soluciones internas,
+      optimizando bases de datos y mejorando la experiencia de usuario en los sistemas existentes.
+    `,
+    achievements: [
+      "Diseñé y optimicé estructuras de bases de datos en PostgreSQL, mejorando significativamente la velocidad de consulta y el uso eficiente del almacenamiento.",
+      "Desarrollé interfaces con Vue.js 2 (CDN) que facilitaban el desacoplamiento de funcionalidades y mejoraban la mantenibilidad del frontend.",
+      "Automatizé procesos de generación de reportes a través de vistas especializadas, reduciendo tiempos de respuesta y mejorando la presentación de datos clave.",
+      "Participé en la creación y mejora de procedimientos de almacenamiento de datos, aumentando la integridad y seguridad de la información.",
+      "Destacado por mi rápida adaptación y resolución de problemas, pasando de aprendiz a desarrollador contratado en menos de un año",
+    ],
+    skills: [
+      { name: "Vue.JS 2", icon: "logos:vue" },
+      { name: "JavaScript", icon: "logos:javascript" },
+      { name: "HTML 5", icon: "logos:html-5" },
+      { name: "CSS", icon: "logos:css-3" },
+      { name: "VuetifyJS", icon: "logos:vuetifyjs" },
+      { name: "Flask", icon: "logos:flask" },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "PL/SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "SQL", icon: "vscode-icons:file-type-sql" },
+      { name: "Bash", icon: "logos:bash-icon" },
+      { name: "Linux", icon: "logos:linux-tux" },
+      { name: "Documentación", icon: "mdi:file-document" },
+      { name: "Subversion", icon: "logos:subversion" },
+      { name: "Jira", icon: "logos:jira" },
+    ],
+    companyUrl:
+      "https://www.infobel.com/es/colombia/construsenales/barranquilla/CO100083003-6053688118/businessdetails.aspx",
+  },
 ];

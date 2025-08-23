@@ -35,7 +35,7 @@ const Contact = ({ handleContact }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={handleContact}
-                className="px-8 py-3 text-lg hover-lift"
+                className="px-8 py-8 text-lg hover-lift"
                 style={{ background: 'var(--text-accent)', color: '#0a0a1a', border: 'none' }}
               >
                 <Mail className="mr-2" size={20} />
@@ -44,7 +44,7 @@ const Contact = ({ handleContact }) => {
               <Button 
                 onClick={handleContact}
                 variant="outline"
-                className="px-8 py-3 text-lg hover-lift"
+                className="px-8 py-8 text-lg hover-lift"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
               >
                 <Linkedin className="mr-2" size={20} />

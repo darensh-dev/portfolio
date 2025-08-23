@@ -98,8 +98,8 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
 
           <div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 overflow-hidden">
-              <span className="gradient-text">{splitText("Astro")}</span>
-              <span style={{ color: 'var(--text-primary)' }}>{splitText("Developer")}</span>
+              <span className="gradient-text">{splitText("Daren")}</span>
+              <span style={{ color: 'var(--text-primary)' }}>{splitText("sh")}</span>
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 hero-subtitle" style={{ color: 'var(--text-secondary)' }}>
@@ -133,14 +133,15 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
             transition={{ delay: 1 }}
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Mail, href: '#', label: 'Email' }
+              { icon: Github, href: 'https://github.com/darensh-dev', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/daren-salazar', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:contacto@darensh.dev', label: 'Email' }
             ].map((social, index) => (
               <a
                 key={social.label}
                 href={social.href}
-                onClick={(e) => { e.preventDefault(); handleContact(); }}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full glass"
                 title={social.label}
                 ref={el => socialIconsRef.current[index] = el}
