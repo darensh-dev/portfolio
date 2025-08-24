@@ -24,25 +24,27 @@ const Contact = ({ handleContact }) => {
         viewport={{ once: true }}
       >
         <HoloCard className="max-w-2xl mx-auto text-center">
-            <MessageCircle size={48} className="mx-auto mb-6" style={{ color: 'var(--text-accent)' }} />
-            <h3 className="text-2xl font-display font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-              Contactar a la base
-            </h3>
-            <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
-              Si tienes un proyecto en mente o quieres explorar el universo tecnológico, envíame una señal.
-            </p>
+          <MessageCircle size={48} className="mx-auto mb-6" style={{ color: 'var(--text-accent)' }} />
+          <h3 className="text-2xl font-display font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+            Contactar a la base
+          </h3>
+          <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
+            Si tienes un proyecto en mente o quieres explorar el universo tecnológico, envíame una señal.
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={handleContact}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:contacto@darensh.dev" target="_blank" rel="noopener noreferrer">
+              <Button
                 className="px-8 py-8 text-lg hover-lift"
                 style={{ background: 'var(--text-accent)', color: '#0a0a1a', border: 'none' }}
               >
                 <Mail className="mr-2" size={20} />
                 Enviar Transmisión
               </Button>
-              <Button 
-                onClick={handleContact}
+            </a>
+
+            <a href="https://www.linkedin.com/in/daren-salazar" target="_blank" rel="noopener noreferrer">
+              <Button
                 variant="outline"
                 className="px-8 py-8 text-lg hover-lift"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
@@ -50,7 +52,8 @@ const Contact = ({ handleContact }) => {
                 <Linkedin className="mr-2" size={20} />
                 Conectar en Red Social
               </Button>
-            </div>
+            </a>
+          </div>
         </HoloCard>
       </motion.div>
     </SectionWrapper>
