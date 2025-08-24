@@ -69,32 +69,17 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
 
   return (
     <section id="inicio" ref={heroRef} className="min-h-screen flex items-center justify-center px-4 pt-24 md:pt-16 relative overflow-hidden">
-      {/* <motion.div
-        className="absolute -left-16 -top-16 md:left-16 md:top-16 w-64 h-64 opacity-50"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 100, repeat: Infinity, ease: 'linear' }}
-      >
-        <Planet1 active={true} size="100%" />
-      </motion.div>
-       <motion.div
-        className="absolute -right-24 bottom-0 md:right-24 md:-bottom-24 w-96 h-96 opacity-30"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 150, repeat: Infinity, ease: 'linear' }}
-      >
-        <img  alt="Nebulosa espacial distante" src="https://images.unsplash.com/photo-1662719012928-4017f17d5b3c" />
-      </motion.div> */}
-
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="space-y-8">
-          <motion.div 
+          {/* <motion.div
             className="w-40 h-40 mx-auto rounded-full glass float overflow-hidden border-2 border-[var(--text-accent)] shadow-[0_0_30px_var(--text-accent)]"
             whileHover={{ scale: 1.1 }}
           >
-            <img 
+            <img
               alt="Astronauta desarrollador profesional"
               className="w-full h-full object-cover"
-             src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031" />
-          </motion.div>
+              src="profile.jpeg" />
+          </motion.div> */}
 
           <div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 overflow-hidden">
@@ -103,30 +88,31 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 hero-subtitle" style={{ color: 'var(--text-secondary)' }}>
-              Explorando el universo del código con más de 6 años de experiencia.
+              Más allá del código, desarrollando ideas.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center hero-buttons">
-              <Button 
+              <Button
                 onClick={() => scrollToSection('proyectos')}
                 className="px-8 py-3 text-lg hover-lift"
                 style={{ background: 'var(--text-accent)', color: '#0a0a1a', border: 'none' }}
               >
                 Ver Proyectos
               </Button>
-              <Button 
-                onClick={handleDownloadCV}
-                variant="outline"
-                className="px-8 py-3 text-lg hover-lift"
-                style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
-              >
-                <Download className="mr-2" size={20} />
-                Descargar Manifiesto
-              </Button>
+              <a href="https://drive.google.com/file/d/1gm3sHhK34ZUEMUkq6SkDlW0ztA_4PXNd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="px-8 py-3 text-lg hover-lift"
+                  style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
+                >
+                  <Download className="mr-2" size={20} />
+                  Descargar Manifiesto
+                </Button>
+              </a>
             </div>
           </div>
 
-          <motion.div 
+          <motion.div
             className="flex justify-center space-x-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
