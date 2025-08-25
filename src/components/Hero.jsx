@@ -121,7 +121,7 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
             {[
               { icon: Github, href: 'https://github.com/darensh-dev', label: 'GitHub' },
               { icon: Linkedin, href: 'https://www.linkedin.com/in/daren-salazar', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:contacto@darensh.dev', label: 'Email' }
+              { icon: Mail, href: 'mailto:contact@darensh.dev', label: 'Email' }
             ].map((social, index) => (
               <a
                 key={social.label}

@@ -33,7 +33,7 @@ const Contact = ({ handleContact }) => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:contacto@darensh.dev" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:contact@darensh.dev" target="_blank" rel="noopener noreferrer">
               <Button
                 className="px-8 py-8 text-lg hover-lift"
                 style={{ background: 'var(--text-accent)', color: '#0a0a1a', border: 'none' }}
