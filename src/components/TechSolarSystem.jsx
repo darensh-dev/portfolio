@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { 
-  Code, 
-  Server, 
-  Cloud, 
-  Database, 
-  Settings, 
+import {
+  Code,
+  Server,
+  Cloud,
+  Database,
+  Settings,
   Palette,
   ChevronRight,
   X
@@ -85,13 +85,13 @@ const TechSolarSystem = () => {
     const system = systems[activeSystem];
     return (
       <HoloCard className="p-8 relative">
-        <button 
+        <button
           onClick={closeSystem}
           className="absolute top-4 right-4 p-2 rounded-full bg-red-500/20 hover:bg-red-500/40 transition-all z-10"
         >
           <X className="w-5 h-5 text-red-400" />
         </button>
-        
+
         <div className="text-center mb-8">
           <div className={`inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r ${system.color} bg-opacity-20 border border-gray-600`}>
             {system.icon}
@@ -101,7 +101,7 @@ const TechSolarSystem = () => {
           </div>
           <p className="text-gray-300 mt-2">{system.description}</p>
         </div>
-        
+
         {/* Sistema Solar Interactivo */}
         <div className="relative min-h-[500px] flex items-center justify-center overflow-hidden">
           {/* Sol Central */}
@@ -163,7 +163,7 @@ const TechSolarSystem = () => {
       <h3 className="text-2xl font-display font-bold mb-8 text-center" style={{ color: 'var(--text-primary)' }}>
         Sistemas Tecnológicos Galácticos
       </h3>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {Object.entries(systems).map(([key, system]) => (
           <div
@@ -183,10 +183,10 @@ const TechSolarSystem = () => {
               </div>
               <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mt-4">
               {system.planets.slice(0, 6).map((planet) => (
-                <span 
+                <span
                   key={planet.name}
                   className="inline-flex items-center gap-1 px-2 py-1 bg-black/30 rounded-full text-xs text-gray-200"
                 >
@@ -215,12 +215,13 @@ const TechSolarSystem = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-4">
           {[
-            '🎯 Liderazgo Técnico', 
-            '🔧 Resolución de Problemas', 
-            '👥 Trabajo en Equipo', 
-            '📡 Comunicación', 
-            '⚡ Gestión Ágil', 
-            '🌟 Adaptabilidad'
+            '🎯 Liderazgo Técnico',
+            '📅 Planificación a largo plazo',
+            '📡 Planificación estratégica',
+            '👥 Formación y mentoría',
+            '🔧 Gestión del cambio',
+            '💰 Gestión Presupuestaria',
+            '📋 Cumplimiento normativo'
           ].map((skill) => (
             <div key={skill} className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 hover:border-blue-400/60 transition-all hover:scale-105">
               <span className="text-sm font-medium text-blue-100">{skill}</span>
