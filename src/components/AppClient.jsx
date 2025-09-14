@@ -44,10 +44,10 @@ function AppClient() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      gsap.to(window, { 
-        duration: 1.2, 
-        scrollTo: { y: element, autoKill: false }, 
-        ease: 'power3.inOut' 
+      gsap.to(window, {
+        duration: 1.2,
+        scrollTo: { y: element, autoKill: false },
+        ease: 'power3.inOut'
       });
     }
   };
@@ -55,31 +55,24 @@ function AppClient() {
   const handleContact = () => {
     toast({
       title: "🚧 Esta funcionalidad no está implementada aún",
-      description: "¡Pero no te preocupes! ¡Puedes solicitarla en tu próximo prompt! 🚀"
+      description: ""
     });
   };
 
-  const handleDownloadCV = () => {
-    toast({
-      title: "🚧 Esta funcionalidad no está implementada aún",
-      description: "¡Pero no te preocupes! ¡Puedes solicitarla en tu próximo prompt! 🚀"
-    });
-  };
 
   return (
     <TooltipProvider>
       <CosmicBackground />
       <Cursor />
       <div className="min-h-screen bg-primary/0 relative z-10">
-        <Header 
+        <Header
           activeSection={activeSection}
           scrollToSection={scrollToSection}
         />
         <main>
-          <Hero 
-            scrollToSection={scrollToSection} 
-            handleDownloadCV={handleDownloadCV} 
-            handleContact={handleContact} 
+          <Hero
+            scrollToSection={scrollToSection}
+            handleContact={handleContact}
           />
           <About />
           <Experience />

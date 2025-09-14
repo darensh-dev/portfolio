@@ -33,7 +33,7 @@ export const projects = [
     title: "Generador de Gráficas Dinámicas con Highcharts",
     description:
       "Endpoint backend que genera imágenes de gráficas personalizadas a partir de datos y configuraciones enviadas por el cliente. La solución permite automatizar reportes visuales y sigue siendo utilizada activamente en entornos productivos.",
-    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // aquí puedes subir capturas reales si las tienes
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
     tags: ["backend", "automatización", "reporte visual"],
     stack: [
       { name: "python", color: "blue", icon: "logos:python" },
@@ -41,15 +41,15 @@ export const projects = [
       { name: "docker", color: "blue", icon: "logos:docker-icon" },
       { name: "highcharts", color: "red", icon: "logos:highcharts" },
     ],
-    urlRepo: "https://github.com/darensh/grafica-endpoint", // reemplaza con el enlace real si es público
-    urlDeploy: "", // puedes dejarlo vacío si es privado o en entorno cerrado
+    urlRepo: "https://github.com/darensh-dev/highcharts-image-exporter",
+    urlDeploy: "",
     date: "2022-10-01",
-    author: "Daren Sh",
+    author: "Darensh.dev",
     level: "advanced",
     featured: true,
   },
   {
-    id: 3,
+    id: 2,
     title: "Detección de Placas Vehiculares con CropperJS",
     description:
       "Aplicación web que permite seleccionar regiones de imágenes con CropperJS para detectar y aislar placas de vehículos. El sistema procesa la imagen recortada para identificar y extraer la matrícula, siendo útil como paso previo a reconocimiento de texto (OCR) o análisis de tráfico.",
@@ -61,50 +61,248 @@ export const projects = [
       { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
       { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
     ],
-    urlRepo: "https://github.com/darensh/placa-cropper",
+    urlRepo: "https://github.com/darensh-dev/placa-cropper",
     urlDeploy: "https://placa-cropper.vercel.app",
     date: "2024-04-10",
-    author: "Daren Sh",
+    author: "Darensh.dev",
     level: "intermediate",
     featured: true,
   },
   {
-    id: 2,
-    title: "Proyecto 1",
+    id: 3, // Ajusta según tu numeración
+    title: "gclit - Git CLI Assistant",
     description:
-      "cupiditate laboriosam corrupti beatae quae quaerat, dolores in. Explicabo fugit dolore ducimus, laborum asperiores temporibus beatae 1",
-    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
-    tags: ["opensource", "license MIT"],
+      "Asistente de línea de comandos potenciado por LLMs que genera automáticamente mensajes de commit inteligentes y documentación de pull requests analizando los diffs de Git. Soporta múltiples proveedores de Git y LLM con arquitectura hexagonal.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // Reemplaza con screenshots reales de tu CLI
+    tags: ["CLI", "AI-powered", "Git automation", "opensource", "license MIT"],
     stack: [
-      { name: "vue", color: "blue", icon: "logos:vue" },
-      { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
-      { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
+      { name: "Python", color: "blue", icon: "logos:python" },
+      { name: "OpenAI", color: "green", icon: "simple-icons:openai" },
+      { name: "GitHub API", color: "black", icon: "logos:github-icon" },
+      { name: "Azure DevOps", color: "blue", icon: "logos:azure" },
+      { name: "Typer", color: "purple", icon: "simple-icons:python" }, // CLI framework
+      { name: "Pydantic", color: "red", icon: "simple-icons:pydantic" },
     ],
-    urlRepo: "https://github.com/darensh/proyecto1",
-    urlDeploy: "https://www.google.com",
-    date: "2024-02-11",
-    author: "Daren Sh",
-    level: "beginner",
-    featured: false,
+    urlRepo: "https://github.com/darensh-dev/gclit", // Reemplaza con tu URL real
+    urlDeploy: null, // Es una herramienta CLI, no tiene deploy web
+    date: "2024-12-01", // Ajusta con la fecha real de creación
+    author: "Darensh.dev",
+    level: "intermediate", // Considerando la complejidad del proyecto
+    featured: true, // Es un proyecto bastante completo e innovador
   },
   {
-    id: 4,
-    title: "Proyecto 2",
+    id: 4, // Ajusta según tu numeración
+    title: "Control de Gastos Personales",
     description:
-      "cupiditate laboriosam corrupti beatae quae quaerat, dolores in. Explicabo fugit dolore ducimus, laborum asperiores temporibus beatae 2",
-    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
-    tags: ["Proyecto personal", "opensource", "license MIT"],
-    stack: [
-      { name: "react", color: "blue", icon: "logos:react" },
-      { name: "tailwind", color: "blue", icon: "logos:tailwindcss-icon" },
-      { name: "typescript", color: "blue", icon: "logos:typescript-icon" },
+      "Sistema completo de control de gastos personales con Clean Architecture. Permite clasificar gastos, asignar presupuestos mensuales, registrar depósitos y generar reportes comparativos entre presupuestado vs ejecutado con autenticación JWT.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // Reemplaza con screenshots de la API/Swagger y reportes
+    tags: [
+      "Clean Architecture",
+      "Personal Finance",
+      "API REST",
+      "Multi-tenant",
+      "opensource",
     ],
-    urlRepo: "https://github.com/darensh/proyecto2",
-    urlDeploy: "https://www.google.com",
-    date: "2024-03-01",
-    author: "Daren Sh",
-    level: "beginner",
-    featured: false,
+    stack: [
+      { name: "C#", color: "purple", icon: "logos:c-sharp" },
+      { name: ".NET 8", color: "purple", icon: "logos:dotnet" },
+      { name: "ASP.NET Core", color: "blue", icon: "simple-icons:dotnet" },
+      { name: "Entity Framework", color: "blue", icon: "simple-icons:dotnet" },
+      { name: "SQL Server", color: "red", icon: "logos:microsoft-sql-server" },
+      { name: "JWT", color: "black", icon: "simple-icons:jsonwebtokens" },
+      { name: "Amazon S3", color: "orange", icon: "logos:aws-s3" },
+      { name: "Azure", color: "blue", icon: "logos:microsoft-azure" },
+    ],
+    urlRepo: "https://github.com/darensh-dev/ExpenseControlApi", // Reemplaza con tu URL real
+    urlDeploy: "", // Reemplaza con tu URL de deploy real
+    date: "2024-11-01", // Ajusta con la fecha real de creación
+    author: "Tu Nombre",
+    level: "advanced", // Considerando Clean Architecture y complejidad del dominio
+    featured: true, // Es un proyecto complejo y bien arquitecturado
+  },
+  {
+    id: 5, // Ajusta según tu numeración
+    title: "Gestión de Gastos Web",
+    description:
+      "Aplicación web moderna desarrollada en Vue.js para la gestión completa de fondos monetarios, depósitos, presupuestos y gastos empresariales. Interfaz responsiva con componentes avanzados y validación de formularios en tiempo real.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // Reemplaza con screenshots de la interfaz
+    tags: [
+      "Vue.js",
+      "Frontend",
+      "Personal Finance",
+      "SPA",
+      "Responsive Design",
+    ],
+    stack: [
+      { name: "Vue 3", color: "green", icon: "logos:vue" },
+      { name: "Vite", color: "purple", icon: "logos:vitejs" },
+      { name: "Pinia", color: "yellow", icon: "logos:pinia" },
+      { name: "PrimeVue", color: "blue", icon: "simple-icons:primevue" },
+      { name: "Tailwind CSS", color: "blue", icon: "logos:tailwindcss-icon" },
+      { name: "TypeScript", color: "blue", icon: "logos:typescript-icon" },
+      { name: "Zod", color: "blue", icon: "simple-icons:zod" },
+      { name: "Docker", color: "blue", icon: "logos:docker-icon" },
+    ],
+    urlRepo: "https://github.com/darensh-dev/ExpenseControlFrontend", // Reemplaza con tu URL real
+    urlDeploy: "", // Reemplaza con tu URL de deploy real
+    date: "2024-11-01", // Ajusta con la fecha real de creación
+    author: "Tu Nombre",
+    level: "intermediate", // Buen dominio de Vue.js y arquitectura frontend
+    featured: true, // Complementa perfectamente el backend y demuestra full-stack skills
+  },
+  // {
+  //   id: 6, // Ajusta según tu numeración
+  //   title: "ExpenseControl - Sistema Completo de Gestión de Gastos",
+  //   description:
+  //     "Solución full-stack completa para control de gastos personales y empresariales. Backend con Clean Architecture en .NET 8 y frontend moderno en Vue.js. Incluye gestión de fondos, presupuestos, reportes comparativos y autenticación JWT con interfaz responsiva.",
+  //   images: ["https://placehold.co/100x80", "https://placehold.co/100x80"], // Screenshots del dashboard, API docs, arquitectura
+  //   tags: [
+  //     "Full-stack",
+  //     "Clean Architecture",
+  //     "Personal Finance",
+  //     "SPA",
+  //     "Multi-tenant",
+  //     "Enterprise",
+  //   ],
+  //   stack: [
+  //     // Backend
+  //     { name: "C#", color: "purple", icon: "logos:c-sharp" },
+  //     { name: ".NET 8", color: "purple", icon: "logos:dotnet" },
+  //     { name: "Entity Framework", color: "blue", icon: "simple-icons:dotnet" },
+  //     { name: "SQL Server", color: "red", icon: "logos:microsoft-sql-server" },
+  //     { name: "JWT", color: "black", icon: "simple-icons:jsonwebtokens" },
+  //     // Frontend
+  //     { name: "Vue 3", color: "green", icon: "logos:vue" },
+  //     { name: "Vite", color: "purple", icon: "logos:vitejs" },
+  //     { name: "Pinia", color: "yellow", icon: "logos:pinia" },
+  //     { name: "Tailwind CSS", color: "blue", icon: "logos:tailwindcss-icon" },
+  //     { name: "PrimeVue", color: "blue", icon: "simple-icons:primevue" },
+  //     // Infrastructure
+  //     { name: "Docker", color: "blue", icon: "logos:docker-icon" },
+  //     { name: "Azure", color: "blue", icon: "logos:microsoft-azure" },
+  //     { name: "Amazon S3", color: "orange", icon: "logos:aws-s3" },
+  //   ],
+  //   urlRepo: "", // Repo principal o monorepo
+  //   urlDeploy: "", // URL del frontend desplegado
+  //   date: "2024-11-01", // Fecha del proyecto completo
+  //   author: "Tu Nombre",
+  //   level: "advanced", // Es una solución completa y compleja
+  //   featured: true, // Definitivamente destacado por ser full-stack
+  //   // Campos adicionales opcionales para proyectos full-stack
+  //   repositories: [
+  //     {
+  //       name: "Backend API",
+  //       url: "https://github.com/tu-usuario/ExpenseControlApi",
+  //       description: "REST API con Clean Architecture",
+  //     },
+  //     {
+  //       name: "Frontend Web",
+  //       url: "https://github.com/tu-usuario/ExpenseControlFrontend",
+  //       description: "Aplicación web Vue.js",
+  //     },
+  //   ],
+  //   deployments: [
+  //     {
+  //       name: "API",
+  //       url: "https://expense-api.azurewebsites.net",
+  //       type: "backend",
+  //     },
+  //     {
+  //       name: "Web App",
+  //       url: "https://expense-control.vercel.app",
+  //       type: "frontend",
+  //     },
+  //   ],
+  // },
+  {
+    id: 7,
+    title: "Legends Management System - Technical Challenge",
+    description:
+      "Sistema full-stack para gestión de leyendas con categorización geográfica. Backend FastAPI con SQLModel y almacenamiento S3, frontend Vue.js con TypeScript. Incluye testing completo y containerización Docker.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
+    tags: [
+      "Technical Challenge",
+      "Full-stack",
+      "FastAPI",
+      "Vue.js",
+      "Geolocation",
+      "File Upload",
+    ],
+    stack: [
+      // Backend
+      { name: "Python", color: "blue", icon: "logos:python" },
+      { name: "FastAPI", color: "green", icon: "simple-icons:fastapi" },
+      { name: "SQLModel", color: "red", icon: "simple-icons:sqlite" },
+      { name: "MinIO", color: "red", icon: "simple-icons:minio" },
+      // Frontend
+      { name: "Vue 3", color: "green", icon: "logos:vue" },
+      { name: "TypeScript", color: "blue", icon: "logos:typescript-icon" },
+      { name: "Tailwind CSS", color: "blue", icon: "logos:tailwindcss-icon" },
+      { name: "Vite", color: "purple", icon: "logos:vitejs" },
+      // Testing & Tools
+      { name: "Playwright", color: "green", icon: "simple-icons:playwright" },
+      { name: "Docker", color: "blue", icon: "logos:docker-icon" },
+    ],
+    repositories: [
+      {
+        name: "Backend API",
+        url: "https://github.com/darensh-dev//4thewords_backend_daren_salazar",
+        description: "FastAPI + SQLModel + MinIO",
+      },
+      {
+        name: "Frontend App",
+        url: "https://github.com/darensh-dev/4thewords_frontend_daren_salazar",
+        description: "Vue.js + TypeScript + Testing",
+      },
+    ],
+    urlRepo: "https://github.com/darensh-dev//4thewords_backend_daren_salazar",
+    urlDeploy: "https://legends-app.vercel.app", // Si lo desplegaste
+    date: "2024-10-01", // Fecha aproximada
+    author: "Tu Nombre",
+    level: "intermediate",
+    featured: true, // Es un buen proyecto para destacar
+  },
+  {
+    id: 8,
+    title: "CitizenSpace - Sistema de Consulta de Infracciones",
+    description:
+      "Aplicación web empresarial en Angular 20 para consulta de infracciones de tránsito. Implementa patrones de diseño avanzados, arquitectura standalone components, CI/CD automatizado y optimizaciones de rendimiento. Incluye validación robusta, manejo multimedia y deployment a producción.",
+    images: ["https://placehold.co/100x80", "https://placehold.co/100x80"],
+    tags: [
+      "Technical Challenge",
+      "Angular",
+      "Enterprise",
+      "CI/CD",
+      "Design Patterns",
+      "Performance",
+    ],
+    stack: [
+      { name: "Angular 20", color: "red", icon: "logos:angular-icon" },
+      { name: "TypeScript", color: "blue", icon: "logos:typescript-icon" },
+      { name: "RxJS", color: "purple", icon: "simple-icons:reactivex" },
+      { name: "PrimeNG", color: "blue", icon: "simple-icons:primeng" },
+      { name: "TailwindCSS", color: "blue", icon: "logos:tailwindcss-icon" },
+      { name: "Zod", color: "blue", icon: "simple-icons:zod" },
+      { name: "Karma", color: "green", icon: "simple-icons:karma" },
+      { name: "GitHub Actions", color: "black", icon: "logos:github-actions" },
+      { name: "Nginx", color: "green", icon: "logos:nginx" },
+      { name: "Linux VPS", color: "yellow", icon: "logos:linux-tux" },
+    ],
+    urlRepo: "https://github.com/tu-usuario/citizen-space",
+    urlDeploy: "https://ciudadano.tu-dominio.com", // Si está desplegado
+    date: "2024-12-01",
+    author: "Tu Nombre",
+    level: "advanced", // Definitivamente avanzado
+    featured: true, // DEBE estar destacado
+
+    // Características especiales para destacar
+    highlights: [
+      "Standalone Components Architecture",
+      "Design Patterns Implementation",
+      "CI/CD Pipeline with GitHub Actions",
+      "Performance Optimizations",
+      "Enterprise-grade Security",
+    ],
   },
 ];
 

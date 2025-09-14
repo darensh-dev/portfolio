@@ -3,26 +3,35 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data';
+import { useToast } from '@/components/ui/use-toast';
 import SectionWrapper, { SectionTitle } from '@/components/SectionWrapper';
 import HoloCard from '@/components/HoloCard';
 
-const ProjectCard = ({ project, handleContact, index }) => {
+const ProjectCard = ({ project, index }) => {
+  const { toast } = useToast();
+
+  const handleContact = () => {
+    toast({
+      title: "🚧 Esta funcionalidad no está implementada aún",
+      description: ""
+    });
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
       viewport={{ once: true }}
-      className={`h-full ${
-        project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-      }`}
+      className={`h-full ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+        }`}
     >
       <HoloCard className="h-full flex flex-col">
         <div className="overflow-hidden" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 90%, 90% 100%, 0 100%)' }}>
-          <img 
+          <img
             alt={`Captura de pantalla del proyecto ${project.title}`}
             className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-           src="https://images.unsplash.com/photo-1572177812156-58036aae439c" />
+            src="https://images.unsplash.com/photo-1572177812156-58036aae439c" />
         </div>
 
         <div className="p-0 pt-6 flex flex-col flex-grow">
@@ -56,16 +65,18 @@ const ProjectCard = ({ project, handleContact, index }) => {
               <ExternalLink size={16} className="mr-2" />
               Ver Demo
             </Button>
-            <Button
-              onClick={handleContact}
-              variant="outline"
-              size="sm"
-              className="flex-1 hover-lift"
-              style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
-            >
-              <Github size={16} className="mr-2" />
-              Código Fuente
-            </Button>
+
+            <a href={project.urlRepo} target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1 hover-lift"
+                style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
+              >
+                <Github size={16} className="mr-2" />
+                Código Fuente
+              </Button>
+            </a>
           </div>
         </div>
       </HoloCard>
@@ -73,7 +84,7 @@ const ProjectCard = ({ project, handleContact, index }) => {
   );
 };
 
-const Projects = ({ handleContact }) => {
+const Projects = () => {
   return (
     <SectionWrapper id="proyectos">
       <SectionTitle>
@@ -85,7 +96,7 @@ const Projects = ({ handleContact }) => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <ProjectCard key={project.id} project={project} handleContact={handleContact} index={index} />
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
     </SectionWrapper>

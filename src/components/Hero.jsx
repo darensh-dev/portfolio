@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Planet1 from './planets/Planet1';
 
-const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
+const Hero = ({ scrollToSection }) => {
   const heroRef = useRef(null);
   const socialIconsRef = useRef([]);
 
@@ -83,8 +83,8 @@ const Hero = ({ scrollToSection, handleDownloadCV, handleContact }) => {
 
           <div>
             <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 overflow-hidden">
-              <span className="gradient-text">{splitText("Daren")}</span>
-              <span style={{ color: 'var(--text-primary)' }}>{splitText("sh")}</span>
+              <span className="gradient-text">{splitText("Daren")} </span>
+              <span style={{ color: 'var(--text-primary)' }}>{splitText("Salazar H.")}</span>
             </h1>
 
             <p className="text-xl md:text-2xl mb-8 hero-subtitle" style={{ color: 'var(--text-secondary)' }}>
